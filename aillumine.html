@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="aillimine's gallery">
+    <meta name="keywords" content="ai art, ai, aillumine">
+    <title>aillumine' gallery</title>
+    <style>
+        @font-face{
+            font-family: Alegreya;
+            src: url('Alegreya.ttf');
+            font-display: swap;
+        }
+        * {
+            box-sizing: border-box;
+            font-family: Alegreya;
+            padding: 0px;
+            margin: 0px;
+        }
+        body {
+            background: #222225;
+            color: #ccccce;
+        }
+        header{
+            display: grid;
+            justify-content: space-around;
+            grid-template-columns: auto auto;
+            align-content: center;
+            align-items: center;
+            height: 10vh;
+        }
+        header h1{
+            font-size: 28px;
+        }
+        header button{
+            padding: 12px;
+            border: none;
+            outline: none;
+            background: inherit;
+            box-shadow: 2px 2px 4px #111, -2px -2px 4px #555;
+        }
+        main {
+            display: grid;
+            grid-template-columns: auto auto;
+            overflow-y: scroll;
+            height: 71vh;
+            padding: 4px;
+            gap: 4px;
+        }
+        footer{
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            height: 10vh;
+        }
+        .container {
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .container img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>aillumine's gallery</h1>
+        <button>📌</button>
+    </header>
+    <main>
+        <div class="container">
+            <a href="https://i.postimg.cc/xTz26KcW/Imagine-an-anime-girl-with-galaxy-themed-accessories-including-a-starry-eyed-expression-and-celestia.png"><img src="https://i.postimg.cc/xTz26KcW/Imagine-an-anime-girl-with-galaxy-themed-accessories-including-a-starry-eyed-expression-and-celestia.png" alt="Imagine-an-anime-girl-with-galaxy-themed-accessories-including-a-starry-eyed-expression-and-celestia" /></a>
+        </div>
+        <div class="container">
+            <a href="https://i.postimg.cc/KvBnxH1Q/Imagine-an-anime-girl-with-galaxy-themed-accessories-including-a-starry-eyed-expression-and-celestia.png"><img src="https://i.postimg.cc/KvBnxH1Q/Imagine-an-anime-girl-with-galaxy-themed-accessories-including-a-starry-eyed-expression-and-celestia.png" alt="Imagine-an-anime-girl-with-galaxy-themed-accessories-including-a-starry-eyed-expression-and-celestia"/></a>
+        </div>
+    </main>
+    <footer>
+        <div style="height:50px;width:320px;background:silver">
+            
+        </div>
+    </footer>
+    <script>
+        const containers = document.querySelectorAll('.container');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                }
+            });
+        });
+
+        containers.forEach(container => {
+            observer.observe(container);
+        });
+    </script>
+</body>
+</html>
