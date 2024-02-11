@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="aillimine's gallery">
+    <meta name="keywords" content="ai art, ai, aillumine">
+    <title>aillumine' gallery</title>
+    <style>
+@font-face {
+        font-family: Alegreya;
+        src: url('Alegreya.ttf');
+        font-display: swap;
+    }
+        * {
+            box-sizing: border-box;
+            font-family: Alegreya;
+            padding: 0px;
+            margin: 0px;
+        }
+        body {
+            display: grid;
+            justify-content: center;
+            align-content: space-between;
+            background: #222225;
+            color: #ccccce;
+        }
+        header {
+            padding: 14px;
+            text-align: center;
+        }
+        footer {
+            padding: 14px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .container {
+            width: 150px;
+            height: 150px;
+            margin: auto;
+            margin-bottom: 24px;
+        }
+        .container img {
+            width: 100%;
+            height: auto;
+            box-shadow: 2px 2px 4px #111, -2px -2px 4px #555;
+            border-radius: 50%;
+            margin: auto;
+        }
+        .links {
+            display: grid;
+            padding: 24px;
+            row-gap: 12px;
+        }
+        .links button {
+            width: 100%;
+            font-size: 18px;
+            padding: 12px;
+            color: #ccccce;
+            border-radius: 12px;
+            box-shadow: 2px 2px 4px #111, -2px -2px 4px #555;
+            background: #333335;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>aillumine</h1>
+    </header>
+    <main>
+        <div class="container">
+            <img src="profile.png" alt="aillumine's profile">
+        </div>
+        <div class="links">
+            <a href="https://ko-fi.com/aillumine">
+                <button>Ko-fi (Exclusive Content)</button>
+            </a>
+            <a href="https://aillumine.github.io/aillumine.html">
+                <button>Gallery (Download Artworks)</button>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <h2>© designed by aillumine</h2>
+    </footer>
+    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+    <script>
+        kofiWidgetOverlay.draw('aillumine', {
+            'type': 'floating-chat',
+            'floating-chat.donateButton.text': 'Tip',
+            'floating-chat.donateButton.background-color': '#ccccce',
+            'floating-chat.donateButton.text-color': '#222225'
+        });
+    </script>
+</body>
+</html>
